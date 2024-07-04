@@ -115,7 +115,7 @@
         });
 
         startTestButton.addEventListener('click', () => {
-            fetch('einbuergerungstest.json')
+            fetch('testfragen.json')
                 .then(response => response.json())
                 .then(data => {
                     quizData = {
