@@ -116,8 +116,16 @@
 
         startTestButton.addEventListener('click', () => {
             fetch('testfragen.json')
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
+                    if (!data || !data.questions || !Array.isArray(data.questions)) {
+                        throw new Error('Ungültiges JSON-Format');
+                    }
                     quizData = {
                         questions: getRandomQuestions(data.questions, 15)
                     };
@@ -128,7 +136,10 @@
                     startTestButton.style.display = 'none';
                     showQuestion();
                 })
-                .catch(error => console.error('Error loading quiz data:', error));
+                .catch(error => {
+                    console.error('Fehler beim Laden der Quizdaten:', error);
+                    alert('Fehler beim Laden der Fragen. Bitte versuchen Sie es später erneut.');
+                });
         });
     </script>
 </body>
