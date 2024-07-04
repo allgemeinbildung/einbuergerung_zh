@@ -7,6 +7,8 @@
     <style>
         body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
         button { margin-top: 10px; margin-right: 10px; }
+        .result-message { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+        .restart-button { font-size: 18px; padding: 10px 20px; }
     </style>
 </head>
 <body>
@@ -26,11 +28,14 @@
     <div id="resultContainer" style="display:none;">
         <h2>Test beendet</h2>
         <p>Ihre Punkte: <span id="finalScore"></span> von maximal 15 Punkten</p>
-        <p id="passStatus"></p>
+        <p id="passStatus" class="result-message"></p>
+        <p id="resultMessage"></p>
+        <button id="restartButton" class="restart-button">Test neu starten</button>
     </div>
 
     <script>
         const startTestButton = document.getElementById('startTestButton');
+        const restartButton = document.getElementById('restartButton');
         let quizData;
         let currentQuestionIndex = 0;
         let score = 0;
@@ -44,6 +49,7 @@
         const resultContainer = document.getElementById('resultContainer');
         const finalScore = document.getElementById('finalScore');
         const passStatus = document.getElementById('passStatus');
+        const resultMessage = document.getElementById('resultMessage');
 
         function getRandomQuestions(questions, count) {
             const shuffled = questions.sort(() => 0.5 - Math.random());
@@ -106,15 +112,16 @@
             questionContainer.style.display = 'none';
             resultContainer.style.display = 'block';
             finalScore.textContent = score;
-            passStatus.textContent = score >= 12 ? "Bestanden!" : "Nicht bestanden.";
+            if (score >= 12) {
+                passStatus.textContent = "BESTANDEN!";
+                resultMessage.textContent = "Herzlichen Glückwunsch! Sie haben den Einbürgerungstest erfolgreich bestanden. Ihre Kenntnisse über den Kanton Zürich sind beeindruckend.";
+            } else {
+                passStatus.textContent = "NICHT BESTANDEN";
+                resultMessage.textContent = "Leider haben Sie den Test nicht bestanden. Lassen Sie sich nicht entmutigen! Nutzen Sie diese Erfahrung, um Ihre Kenntnisse zu verbessern und versuchen Sie es erneut. Mit etwas mehr Vorbereitung werden Sie beim nächsten Mal sicher erfolgreich sein.";
+            }
         }
 
-        nextButton.addEventListener('click', () => {
-            currentQuestionIndex++;
-            showQuestion();
-        });
-
-        startTestButton.addEventListener('click', () => {
+        function startTest() {
             fetch('testfragen.json')
                 .then(response => {
                     if (!response.ok) {
@@ -140,7 +147,15 @@
                     console.error('Fehler beim Laden der Quizdaten:', error);
                     alert('Fehler beim Laden der Fragen. Bitte versuchen Sie es später erneut.');
                 });
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentQuestionIndex++;
+            showQuestion();
         });
+
+        startTestButton.addEventListener('click', startTest);
+        restartButton.addEventListener('click', startTest);
     </script>
 </body>
 </html>
