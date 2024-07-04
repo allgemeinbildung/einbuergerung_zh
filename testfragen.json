@@ -4095,38 +4095,6 @@
       "additional_info": {
         "real_life_example": "Es ist ein bedeutendes historisches Bauwerk und ein beliebtes Ausflugsziel."
       },
-      {
-      "title": "Landwirtschaftsfläche",
-      "type": "MC",
-      "question_text": "Wie gross ist die Landwirtschaftsfläche im Kanton Zürich?",
-      "answers": [
-        {
-          "text": "5%",
-          "is_correct": false,
-          "feedback": "Falsch! Die Landwirtschaftsfläche im Kanton Zürich beträgt nicht 5%. Die richtige Antwort ist 41%. Fast die Hälfte der Fläche des Kantons Zürich wird landwirtschaftlich genutzt."
-        },
-        {
-          "text": "60%",
-          "is_correct": false,
-          "feedback": "Falsch! Die Landwirtschaftsfläche im Kanton Zürich beträgt nicht 60%. Die richtige Antwort ist 41%. Fast die Hälfte der Fläche des Kantons Zürich wird landwirtschaftlich genutzt."
-        },
-        {
-          "text": "80%",
-          "is_correct": false,
-          "feedback": "Falsch! Die Landwirtschaftsfläche im Kanton Zürich beträgt nicht 80%. Die richtige Antwort ist 41%. Fast die Hälfte der Fläche des Kantons Zürich wird landwirtschaftlich genutzt."
-        },
-        {
-          "text": "41%",
-          "is_correct": true,
-          "feedback": "Richtig! Die Landwirtschaftsfläche im Kanton Zürich beträgt 41%. Fast die Hälfte der Fläche des Kantons Zürich wird landwirtschaftlich genutzt."
-        }
-      ],
-      "points": 1,
-      "penalty": -0.5,
-      "additional_info": {
-        "real_life_example": "Fast die Hälfte der Fläche des Kantons Zürich wird landwirtschaftlich genutzt."
-      }
-    },
     {
       "title": "Bevölkerung 2020",
       "type": "MC",
