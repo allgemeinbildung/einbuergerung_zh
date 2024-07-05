@@ -178,7 +178,7 @@
         {
           "text": "Nein - nur der Nationalrat kann Gesetze ändern",
           "is_correct": false,
-          "feedback": "Falsch! Der Nationalrat kann Gesetze beschließen, aber nicht allein ändern. Die richtige Antwort ist, dass ein Referendum genutzt wird, um neue Gesetze zu stoppen. Ein Referendum ermöglicht es den Bürgern, gegen ein vom Parlament beschlossenes Gesetz zu stimmen."
+          "feedback": "Falsch! Der Nationalrat kann Gesetze beschliessen, aber nicht allein ändern. Die richtige Antwort ist, dass ein Referendum genutzt wird, um neue Gesetze zu stoppen. Ein Referendum ermöglicht es den Bürgern, gegen ein vom Parlament beschlossenes Gesetz zu stimmen."
         },
         {
           "text": "Ja - mit einem Referendum",
@@ -2007,7 +2007,7 @@
         {
           "text": "die Befolgung der Neutralität",
           "is_correct": true,
-          "feedback": "Richtig! Am Wiener Kongress 1815 wurde die Neutralität der Schweiz festgelegt, die bis heute ein wichtiger Bestandteil der Schweizer Außenpolitik ist."
+          "feedback": "Richtig! Am Wiener Kongress 1815 wurde die Neutralität der Schweiz festgelegt, die bis heute ein wichtiger Bestandteil der Schweizer Aussenpolitik ist."
         }
       ],
       "points": 1,
@@ -2045,7 +2045,7 @@
       "points": 1,
       "penalty": -0.5,
       "additional_info": {
-        "real_life_example": "Die Schweiz ist ein föderalistischer Bundesstaat, in dem die Kantone eine große Autonomie haben."
+        "real_life_example": "Die Schweiz ist ein föderalistischer Bundesstaat, in dem die Kantone eine grosse Autonomie haben."
       }
     },
     {
@@ -2743,7 +2743,7 @@
         {
           "text": "Er hat den grössten Tunneldurchmesser der Welt.",
           "is_correct": false,
-          "feedback": "Falsch! Der Gotthard-Basis-Tunnel hat nicht den größten Tunneldurchmesser. Die richtige Antwort ist, dass er der längste Eisenbahntunnel der Welt ist."
+          "feedback": "Falsch! Der Gotthard-Basis-Tunnel hat nicht den grössten Tunneldurchmesser. Die richtige Antwort ist, dass er der längste Eisenbahntunnel der Welt ist."
         }
       ],
       "points": 1,
@@ -2967,13 +2967,13 @@
         {
           "text": "EU",
           "is_correct": true,
-          "feedback": "Richtig! Die EU ist der wichtigste Handelspartner der Schweiz, was den Großteil des Außenhandelsvolumens ausmacht."
+          "feedback": "Richtig! Die EU ist der wichtigste Handelspartner der Schweiz, was den Grossteil des Aussenhandelsvolumens ausmacht."
         }
       ],
       "points": 1,
       "penalty": -0.5,
       "additional_info": {
-        "real_life_example": "Die wirtschaftlichen Beziehungen zur EU sind für die Schweiz von großer Bedeutung, insbesondere im Bereich des Waren- und Dienstleistungsaustauschs."
+        "real_life_example": "Die wirtschaftlichen Beziehungen zur EU sind für die Schweiz von grosser Bedeutung, insbesondere im Bereich des Waren- und Dienstleistungsaustauschs."
       }
     },
     {
@@ -3197,7 +3197,7 @@
       "points": 1,
       "penalty": -0.5,
       "additional_info": {
-        "real_life_example": "Der Aletschgletscher, der größte Gletscher der Alpen, hat in den letzten Jahrzehnten erheblich an Masse verloren."
+        "real_life_example": "Der Aletschgletscher, der grösste Gletscher der Alpen, hat in den letzten Jahrzehnten erheblich an Masse verloren."
       }
     },
     {
@@ -3336,28 +3336,28 @@
         {
           "text": "Basel",
           "is_correct": false,
-          "feedback": "Falsch! Basel ist nicht die größte Stadt der Schweiz. Die richtige Antwort ist Zürich."
+          "feedback": "Falsch! Basel ist nicht die grösste Stadt der Schweiz. Die richtige Antwort ist Zürich."
         },
         {
           "text": "Bern",
           "is_correct": false,
-          "feedback": "Falsch! Bern ist nicht die größte Stadt der Schweiz. Die richtige Antwort ist Zürich."
+          "feedback": "Falsch! Bern ist nicht die grösste Stadt der Schweiz. Die richtige Antwort ist Zürich."
         },
         {
           "text": "Genf",
           "is_correct": false,
-          "feedback": "Falsch! Genf ist nicht die größte Stadt der Schweiz. Die richtige Antwort ist Zürich."
+          "feedback": "Falsch! Genf ist nicht die grösste Stadt der Schweiz. Die richtige Antwort ist Zürich."
         },
         {
           "text": "Zürich",
           "is_correct": true,
-          "feedback": "Richtig! Die größte Stadt der Schweiz ist Zürich."
+          "feedback": "Richtig! Die grösste Stadt der Schweiz ist Zürich."
         }
       ],
       "points": 1,
       "penalty": -0.5,
       "additional_info": {
-        "real_life_example": "Zürich ist mit über 400.000 Einwohnern die größte Stadt der Schweiz und ein wichtiges wirtschaftliches und kulturelles Zentrum."
+        "real_life_example": "Zürich ist mit über 400.000 Einwohnern die grösste Stadt der Schweiz und ein wichtiges wirtschaftliches und kulturelles Zentrum."
       }
     },
     {
@@ -3389,7 +3389,7 @@
       "points": 1,
       "penalty": -0.5,
       "additional_info": {
-        "real_life_example": "Das Mittelland beherbergt die größten Städte der Schweiz und ist das wirtschaftliche Zentrum des Landes."
+        "real_life_example": "Das Mittelland beherbergt die grössten Städte der Schweiz und ist das wirtschaftliche Zentrum des Landes."
       }
     },
     {
@@ -3423,63 +3423,31 @@
       "additional_info": {
         "real_life_example": "Die Schweiz hat einen hohen Anteil an ausländischen Einwohnern, die zur Vielfalt und Wirtschaft des Landes beitragen."
       }
-    },
+    },    
     {
-      "title": "Matterhorn",
-      "type": "MC",
-      "question_text": "Wie heisst dieser Berg?",
-      "answers": [
-        {
-          "text": "Finsteraarhorn",
-          "is_correct": false,
-          "feedback": "Falsch! Der abgebildete Berg ist nicht das Finsteraarhorn. Die richtige Antwort ist das Matterhorn."
-        },
-        {
-          "text": "Eiger",
-          "is_correct": false,
-          "feedback": "Falsch! Der abgebildete Berg ist nicht der Eiger. Die richtige Antwort ist das Matterhorn."
-        },
-        {
-          "text": "Matterhorn",
-          "is_correct": true,
-          "feedback": "Richtig! Der abgebildete Berg ist das Matterhorn, eines der bekanntesten Wahrzeichen der Schweiz."
-        },
-        {
-          "text": "Mont Blanc",
-          "is_correct": false,
-          "feedback": "Falsch! Der abgebildete Berg ist nicht der Mont Blanc. Die richtige Antwort ist das Matterhorn."
-        }
-      ],
-      "points": 1,
-      "penalty": -0.5,
-      "additional_info": {
-        "real_life_example": "Das Matterhorn ist ein beliebtes Ziel für Bergsteiger und Touristen und liegt an der Grenze zwischen der Schweiz und Italien."
-      }
-    },
-    {
-      "title": "Flächenmäßig größter Kanton",
+      "title": "Flächenmässig grösster Kanton",
       "type": "MC",
       "question_text": "Welcher Kanton hat die grösste Fläche?",
       "answers": [
         {
           "text": "Basel",
           "is_correct": false,
-          "feedback": "Falsch! Basel ist nicht der flächenmäßig größte Kanton. Die richtige Antwort ist Graubünden."
+          "feedback": "Falsch! Basel ist nicht der flächenmässig grösste Kanton. Die richtige Antwort ist Graubünden."
         },
         {
           "text": "Zürich",
           "is_correct": false,
-          "feedback": "Falsch! Zürich ist nicht der flächenmäßig größte Kanton. Die richtige Antwort ist Graubünden."
+          "feedback": "Falsch! Zürich ist nicht der flächenmässig grösste Kanton. Die richtige Antwort ist Graubünden."
         },
         {
           "text": "Glarus",
           "is_correct": false,
-          "feedback": "Falsch! Glarus ist nicht der flächenmäßig größte Kanton. Die richtige Antwort ist Graubünden."
+          "feedback": "Falsch! Glarus ist nicht der flächenmässig grösste Kanton. Die richtige Antwort ist Graubünden."
         },
         {
           "text": "Graubünden",
           "is_correct": true,
-          "feedback": "Richtig! Graubünden ist mit einer Fläche von etwa 7.105 Quadratkilometern der größte Kanton der Schweiz."
+          "feedback": "Richtig! Graubünden ist mit einer Fläche von etwa 7.105 Quadratkilometern der grösste Kanton der Schweiz."
         }
       ],
       "points": 1,
@@ -3517,7 +3485,7 @@
       "points": 1,
       "penalty": -0.5,
       "additional_info": {
-        "real_life_example": "Die Bevölkerung der Schweiz wächst kontinuierlich und erreicht regelmäßig neue Höchststände."
+        "real_life_example": "Die Bevölkerung der Schweiz wächst kontinuierlich und erreicht regelmässig neue Höchststände."
       }
     },
     {
@@ -3558,24 +3526,24 @@
       "question_text": "Was ist eine wichtige natürliche Ressource der Schweiz?",
       "answers": [
         {
-          "text": "große Goldvorkommen in der Zentralschweiz",
+          "text": "grosse Goldvorkommen in der Zentralschweiz",
           "is_correct": false,
-          "feedback": "Falsch! Es gibt keine großen Goldvorkommen in der Zentralschweiz. Die richtige Antwort ist große Wasservorräte."
+          "feedback": "Falsch! Es gibt keine grossen Goldvorkommen in der Zentralschweiz. Die richtige Antwort ist grosse Wasservorräte."
         },
         {
           "text": "wertvolle Bodenschätze (Erdöl, Kohle)",
           "is_correct": false,
-          "feedback": "Falsch! Die Schweiz hat keine großen Vorkommen an Erdöl oder Kohle. Die richtige Antwort ist große Wasservorräte."
+          "feedback": "Falsch! Die Schweiz hat keine grossen Vorkommen an Erdöl oder Kohle. Die richtige Antwort ist grosse Wasservorräte."
         },
         {
-          "text": "großer Bestand an Fischen",
+          "text": "grosser Bestand an Fischen",
           "is_correct": false,
-          "feedback": "Falsch! Der Fischbestand ist nicht die wichtigste natürliche Ressource. Die richtige Antwort ist große Wasservorräte."
+          "feedback": "Falsch! Der Fischbestand ist nicht die wichtigste natürliche Ressource. Die richtige Antwort ist grosse Wasservorräte."
         },
         {
-          "text": "große Wasservorräte zum Betrieb von Wasserkraftwerken",
+          "text": "grosse Wasservorräte zum Betrieb von Wasserkraftwerken",
           "is_correct": true,
-          "feedback": "Richtig! Eine wichtige natürliche Ressource der Schweiz sind die großen Wasservorräte, die für den Betrieb von Wasserkraftwerken genutzt werden."
+          "feedback": "Richtig! Eine wichtige natürliche Ressource der Schweiz sind die grossen Wasservorräte, die für den Betrieb von Wasserkraftwerken genutzt werden."
         }
       ],
       "points": 1,
@@ -4434,12 +4402,12 @@
         {
           "text": "den Fernseher abstellen",
           "is_correct": false,
-          "feedback": "Falsch! Den Fernseher abzustellen ist keine sinnvolle Maßnahme. Die richtige Antwort ist Radio hören. Im Ernstfall werden wichtige Informationen über das Radio verbreitet."
+          "feedback": "Falsch! Den Fernseher abzustellen ist keine sinnvolle Massnahme. Die richtige Antwort ist Radio hören. Im Ernstfall werden wichtige Informationen über das Radio verbreitet."
         },
         {
           "text": "zum zentralen Platz der Gemeinde gehen",
           "is_correct": false,
-          "feedback": "Falsch! Zum zentralen Platz der Gemeinde zu gehen ist keine sinnvolle Maßnahme. Die richtige Antwort ist Radio hören. Im Ernstfall werden wichtige Informationen über das Radio verbreitet."
+          "feedback": "Falsch! Zum zentralen Platz der Gemeinde zu gehen ist keine sinnvolle Massnahme. Die richtige Antwort ist Radio hören. Im Ernstfall werden wichtige Informationen über das Radio verbreitet."
         }
       ],
       "points": 1,
@@ -4808,28 +4776,28 @@
         {
           "text": "als Weinland",
           "is_correct": false,
-          "feedback": "Falsch! Die Region Basel ist nicht besonders als Weinland bekannt. Die richtige Antwort ist als Standort grosser Pharmafirmen. In Basel haben viele große Pharmaunternehmen ihren Sitz."
+          "feedback": "Falsch! Die Region Basel ist nicht besonders als Weinland bekannt. Die richtige Antwort ist als Standort grosser Pharmafirmen. In Basel haben viele grosse Pharmaunternehmen ihren Sitz."
         },
         {
           "text": "als Land der Burgen und Klöster",
           "is_correct": false,
-          "feedback": "Falsch! Die Region Basel ist nicht besonders als Land der Burgen und Klöster bekannt. Die richtige Antwort ist als Standort grosser Pharmafirmen. In Basel haben viele große Pharmaunternehmen ihren Sitz."
+          "feedback": "Falsch! Die Region Basel ist nicht besonders als Land der Burgen und Klöster bekannt. Die richtige Antwort ist als Standort grosser Pharmafirmen. In Basel haben viele grosse Pharmaunternehmen ihren Sitz."
         },
         {
           "text": "als Standort grosser Pharmafirmen",
           "is_correct": true,
-          "feedback": "Richtig! Die Region Basel ist besonders als Standort grosser Pharmafirmen bekannt. In Basel haben viele große Pharmaunternehmen ihren Sitz."
+          "feedback": "Richtig! Die Region Basel ist besonders als Standort grosser Pharmafirmen bekannt. In Basel haben viele grosse Pharmaunternehmen ihren Sitz."
         },
         {
           "text": "als Standort verschiedener internationaler Organisationen (z.B. UNO)",
           "is_correct": false,
-          "feedback": "Falsch! Die Region Basel ist nicht besonders als Standort verschiedener internationaler Organisationen bekannt. Die richtige Antwort ist als Standort grosser Pharmafirmen. In Basel haben viele große Pharmaunternehmen ihren Sitz."
+          "feedback": "Falsch! Die Region Basel ist nicht besonders als Standort verschiedener internationaler Organisationen bekannt. Die richtige Antwort ist als Standort grosser Pharmafirmen. In Basel haben viele grosse Pharmaunternehmen ihren Sitz."
         }
       ],
       "points": 1,
       "penalty": -0.5,
       "additional_info": {
-        "real_life_example": "In Basel haben viele große Pharmaunternehmen ihren Sitz."
+        "real_life_example": "In Basel haben viele grosse Pharmaunternehmen ihren Sitz."
       }
     },
     {
