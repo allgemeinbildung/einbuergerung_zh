@@ -51,8 +51,16 @@
         const passStatus = document.getElementById('passStatus');
         const resultMessage = document.getElementById('resultMessage');
 
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+        
         function getRandomQuestions(questions, count) {
-            const shuffled = questions.sort(() => 0.5 - Math.random());
+            const shuffled = shuffleArray([...questions]);
             return shuffled.slice(0, count);
         }
 
@@ -122,7 +130,8 @@
         }
 
         function startTest() {
-            fetch('testfragen.json')
+            const cacheBuster = new Date().getTime();
+            fetch(`testfragen.json?_=${cacheBuster}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
@@ -147,6 +156,7 @@
                     console.error('Fehler beim Laden der Quizdaten:', error);
                     alert('Fehler beim Laden der Fragen. Bitte versuchen Sie es später erneut.');
                 });
+
         }
 
         nextButton.addEventListener('click', () => {
