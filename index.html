@@ -9,6 +9,13 @@
         button { margin-top: 10px; margin-right: 10px; }
         .result-message { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
         .restart-button { font-size: 18px; padding: 10px 20px; }
+        #questionsSummary {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -39,6 +46,8 @@
         let quizData;
         let currentQuestionIndex = 0;
         let score = 0;
+        let userAnswers = [];
+
 
         const questionContainer = document.getElementById('questionContainer');
         const questionTitle = document.getElementById('questionTitle');
@@ -89,6 +98,13 @@
             const question = quizData.questions[currentQuestionIndex];
             const selectedAnswer = question.answers[answerIndex];
 
+            userAnswers.push({
+                questionText: question.question_text,
+                userAnswer: selectedAnswer.text,
+                correctAnswer: question.answers.find(a => a.is_correct).text,
+                isCorrect: selectedAnswer.is_correct
+            });
+
             let feedbackText = '';
             if (selectedAnswer.feedback) {
                 feedbackText += selectedAnswer.feedback;
@@ -127,9 +143,37 @@
                 passStatus.textContent = "NICHT BESTANDEN";
                 resultMessage.textContent = "Leider haben Sie den Test nicht bestanden. Lassen Sie sich nicht entmutigen! Nutzen Sie diese Erfahrung, um Ihre Kenntnisse zu verbessern und versuchen Sie es erneut. Mit etwas mehr Vorbereitung werden Sie beim nächsten Mal sicher erfolgreich sein.";
             }
+
+                // Add this line to display questions and answers
+                displayQuestionsSummary();
         }
 
+        function displayQuestionsSummary() {
+            const summaryContainer = document.createElement('div');
+            summaryContainer.id = 'questionsSummary';
+            summaryContainer.style.marginTop = '20px';
+        
+            userAnswers.forEach((answer, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.style.marginBottom = '15px';
+                questionDiv.style.padding = '10px';
+                questionDiv.style.border = '1px solid #ccc';
+                questionDiv.style.borderRadius = '5px';
+        
+                questionDiv.innerHTML = `
+                    <p><strong>Frage ${index + 1}:</strong> ${answer.questionText}</p>
+                    <p>Ihre Antwort: <span style="color: ${answer.isCorrect ? 'green' : 'red'};">${answer.userAnswer}</span></p>
+                    <p>Korrekte Antwort: <span style="color: green;">${answer.correctAnswer}</span></p>
+                `;
+        
+                summaryContainer.appendChild(questionDiv);
+            });
+        
+            resultContainer.appendChild(summaryContainer);
+        }
+        
         function startTest() {
+            userAnswers = []; 
             const cacheBuster = new Date().getTime();
             fetch(`testfragen.json?_=${cacheBuster}`)
                 .then(response => {
