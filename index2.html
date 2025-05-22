@@ -591,10 +591,7 @@
         }
 
         function showSection(sectionName) {
-            Object.values(elements).forEach(el => {
-                if (el && el.style) el.style.display = 'none';
-            });
-            
+            // Hide all sections first
             elements.welcomeSection.style.display = 'none';
             elements.progressSection.style.display = 'none';
             elements.questionSection.style.display = 'none';
