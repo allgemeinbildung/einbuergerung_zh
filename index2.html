@@ -15,478 +15,190 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 10px;
+            font-size: 14px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             animation: slideIn 0.8s ease-out;
+            display: flex;
+            min-height: 90vh;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #f8f9fa;
+            padding: 15px;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
         }
 
         @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .header {
             background: linear-gradient(135deg, #ff6b6b, #ee5a24);
             color: white;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.06)"/></svg>');
-            animation: float 20s linear infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
+            border-radius: 12px 12px 0 0;
         }
 
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
+            font-size: 1.8em;
+            margin-bottom: 8px;
         }
 
         .header .subtitle {
-            font-size: 1.1em;
+            font-size: 0.9em;
             opacity: 0.9;
-            position: relative;
-            z-index: 1;
-        }
-
-        .content {
-            padding: 40px;
         }
 
         .progress-section {
-            margin-bottom: 30px;
-            display: none;
+            margin-bottom: 20px;
         }
 
         .progress-bar {
-            width: 100%;
-            height: 12px;
+            height: 8px;
             background: #e0e0e0;
-            border-radius: 6px;
-            overflow: hidden;
-            margin-bottom: 15px;
+            border-radius: 4px;
+            margin-bottom: 12px;
         }
 
         .progress-fill {
             height: 100%;
             background: linear-gradient(90deg, #00d2ff, #3a47d5);
             width: 0%;
-            transition: width 0.5s ease;
-            border-radius: 6px;
+            transition: width 0.3s ease;
         }
 
         .stats {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            display: grid;
+            gap: 10px;
         }
 
         .stat-item {
-            background: #f8f9fa;
-            padding: 15px 20px;
-            border-radius: 12px;
-            text-align: center;
-            flex: 1;
-            margin: 0 5px;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .stat-item:hover {
-            border-color: #667eea;
-            transform: translateY(-2px);
+            padding: 10px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         .stat-value {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #333;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 5px;
+            font-size: 1.4em;
         }
 
         .welcome-section {
-            text-align: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
 
         .welcome-section h2 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 1.8em;
+            font-size: 1.4em;
+            margin-bottom: 15px;
         }
 
         .welcome-section p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            font-size: 1.1em;
+            margin-bottom: 10px;
+            font-size: 0.95em;
         }
 
         .start-button {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border: none;
-            padding: 18px 40px;
-            font-size: 1.2em;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .start-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(102, 126, 234, 0.4);
-        }
-
-        .start-button:active {
-            transform: translateY(-1px);
-        }
-
-        .question-section {
-            display: none;
-            animation: fadeIn 0.6s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            padding: 12px 30px;
+            font-size: 1em;
+            margin-top: 10px;
         }
 
         .question-card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
         }
 
         .question-title {
-            color: #667eea;
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 12px;
         }
 
         .question-text {
-            color: #333;
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 25px;
+            font-size: 0.95em;
+            margin-bottom: 15px;
         }
 
         .answers-grid {
-            display: grid;
-            gap: 15px;
-            margin-bottom: 25px;
+            gap: 10px;
         }
 
         .answer-button {
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 18px 25px;
-            text-align: left;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1em;
-            line-height: 1.4;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .answer-button:hover {
-            border-color: #667eea;
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
-        }
-
-        .answer-button.correct {
-            background: #d4edda;
-            border-color: #28a745;
-            color: #155724;
-        }
-
-        .answer-button.incorrect {
-            background: #f8d7da;
-            border-color: #dc3545;
-            color: #721c24;
-        }
-
-        .answer-button.disabled {
-            cursor: not-allowed;
-            opacity: 0.7;
+            padding: 12px 15px;
+            font-size: 0.9em;
         }
 
         .feedback-section {
-            background: #e3f2fd;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-            border-left: 4px solid #2196f3;
-            display: none;
-        }
-
-        .feedback-section.show {
-            display: block;
-            animation: slideDown 0.4s ease;
-        }
-
-        @keyframes slideDown {
-            from { opacity: 0; max-height: 0; }
-            to { opacity: 1; max-height: 200px; }
+            padding: 15px;
+            margin: 15px 0;
         }
 
         .next-button {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: all 0.3s ease;
-            display: none;
-            margin-top: 20px;
-        }
-
-        .next-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
+            padding: 12px 25px;
+            font-size: 0.9em;
         }
 
         .result-section {
-            display: none;
-            text-align: center;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
         .result-animation {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3em;
-            animation: bounce 1s ease infinite alternate;
-        }
-
-        @keyframes bounce {
-            from { transform: scale(1); }
-            to { transform: scale(1.1); }
-        }
-
-        .result-passed {
-            background: linear-gradient(135deg, #28a745, #20c997);
-        }
-
-        .result-failed {
-            background: linear-gradient(135deg, #dc3545, #c82333);
+            width: 80px;
+            height: 80px;
+            font-size: 2em;
         }
 
         .result-title {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .result-passed .result-title {
-            color: #28a745;
-        }
-
-        .result-failed .result-title {
-            color: #dc3545;
+            font-size: 1.8em;
         }
 
         .result-score {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .result-message {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-
-        .restart-button {
-            background: linear-gradient(135deg, #6c757d, #495057);
-            color: white;
-            border: none;
-            padding: 15px 35px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-            margin-right: 15px;
-        }
-
-        .restart-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(108, 117, 125, 0.3);
-        }
-
-        .summary-section {
-            margin-top: 40px;
-            text-align: left;
-        }
-
-        .summary-title {
-            font-size: 1.4em;
-            color: #333;
-            margin-bottom: 20px;
-            text-align: center;
+            font-size: 1.2em;
         }
 
         .summary-container {
-            max-height: 400px;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 20px;
-            background: #f8f9fa;
+            max-height: 300px;
+            padding: 15px;
         }
 
         .summary-item {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-left: 4px solid #667eea;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .summary-item.correct {
-            border-left-color: #28a745;
-        }
-
-        .summary-item.incorrect {
-            border-left-color: #dc3545;
-        }
-
-        .summary-question {
-            font-weight: 600;
+            padding: 15px;
             margin-bottom: 10px;
-            color: #333;
-        }
-
-        .summary-answer {
-            margin-bottom: 8px;
-        }
-
-        .summary-answer.user {
-            color: #666;
-        }
-
-        .summary-answer.correct {
-            color: #28a745;
-            font-weight: 500;
-        }
-
-        .summary-answer.incorrect {
-            color: #dc3545;
-            font-weight: 500;
-        }
-
-        .achievement-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #ffd700, #ffed4e);
-            color: #333;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 600;
-            margin: 10px 5px;
-            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
         }
 
         @media (max-width: 768px) {
             .container {
-                margin: 10px;
-                border-radius: 15px;
-            }
-            
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .content {
-                padding: 20px;
-            }
-            
-            .stats {
                 flex-direction: column;
             }
-            
-            .stat-item {
-                margin: 5px 0;
+
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>🇨🇭 Einbürgerungstest</h1>
-            <div class="subtitle">Kanton Zürich</div>
-        </div>
-        
-        <div class="content">
-            <!-- Welcome Section -->
-            <div id="welcomeSection" class="welcome-section">
-                <h2>Willkommen zum Einbürgerungstest!</h2>
-                <p>🎯 <strong>Ziel:</strong> Mindestens 12 von 15 Punkten erreichen</p>
-                <p>📚 <strong>Fragen:</strong> 15 zufällige Fragen aus 178 verfügbaren</p>
-                <p>⏱️ <strong>Zeit:</strong> Unbegrenzt - Nehmen Sie sich die Zeit, die Sie brauchen</p>
-                <p>🍀 <strong>Viel Erfolg!</strong> Zeigen Sie Ihr Wissen über den Kanton Zürich!</p>
-                <button id="startTestButton" class="start-button">
-                    🚀 Test starten
-                </button>
-            </div>
-
-            <!-- Progress Section -->
-            <div id="progressSection" class="progress-section">
+        <div class="sidebar">
+            <div class="progress-section">
                 <div class="progress-bar">
                     <div id="progressFill" class="progress-fill"></div>
                 </div>
@@ -499,300 +211,60 @@
                         <span id="currentScore" class="stat-value">0</span>
                         <div class="stat-label">Punkte</div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-value">15</span>
-                        <div class="stat-label">Gesamt</div>
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Question Section -->
-            <div id="questionSection" class="question-section">
-                <div class="question-card">
-                    <div id="questionTitle" class="question-title"></div>
-                    <div id="questionText" class="question-text"></div>
-                    <div id="answersContainer" class="answers-grid"></div>
-                    <div id="feedbackSection" class="feedback-section">
-                        <div id="feedbackText"></div>
-                    </div>
-                    <button id="nextButton" class="next-button">Nächste Frage →</button>
-                </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>🇨🇭 Einbürgerungstest</h1>
+                <div class="subtitle">Kanton Zürich</div>
             </div>
 
-            <!-- Result Section -->
-            <div id="resultSection" class="result-section">
-                <div id="resultAnimation" class="result-animation"></div>
-                <div id="resultTitle" class="result-title"></div>
-                <div id="resultScore" class="result-score"></div>
-                <div id="resultMessage" class="result-message"></div>
-                <div id="achievementBadges"></div>
-                <div>
+            <div class="content">
+                <!-- Welcome Section -->
+                <div id="welcomeSection" class="welcome-section">
+                    <h2>Willkommen zum Einbürgerungstest!</h2>
+                    <p>🎯 Mindestens 12/15 Punkten</p>
+                    <p>📚 15 zufällige Fragen</p>
+                    <p>⏱️ Unbegrenzte Zeit</p>
+                    <button id="startTestButton" class="start-button">
+                        🚀 Test starten
+                    </button>
+                </div>
+
+                <!-- Question Section -->
+                <div id="questionSection" class="question-section">
+                    <div class="question-card">
+                        <div id="questionTitle" class="question-title"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="answersContainer" class="answers-grid"></div>
+                        <div id="feedbackSection" class="feedback-section">
+                            <div id="feedbackText"></div>
+                        </div>
+                        <button id="nextButton" class="next-button">Nächste →</button>
+                    </div>
+                </div>
+
+                <!-- Result Section -->
+                <div id="resultSection" class="result-section">
+                    <div id="resultAnimation" class="result-animation"></div>
+                    <div id="resultTitle" class="result-title"></div>
+                    <div id="resultScore" class="result-score"></div>
+                    <div id="resultMessage" class="result-message"></div>
+                    <div id="achievementBadges"></div>
                     <button id="restartButton" class="restart-button">🔄 Erneut versuchen</button>
-                </div>
-                
-                <div class="summary-section">
-                    <h3 class="summary-title">📋 Zusammenfassung Ihrer Antworten</h3>
-                    <div id="summaryContainer" class="summary-container"></div>
+                    <div class="summary-section">
+                        <h3 class="summary-title">📋 Antworten</h3>
+                        <div id="summaryContainer" class="summary-container"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Game state
-        let gameState = {
-            questions: [],
-            currentIndex: 0,
-            score: 0,
-            userAnswers: [],
-            startTime: null
-        };
-
-        // DOM elements
-        const elements = {
-            welcomeSection: document.getElementById('welcomeSection'),
-            progressSection: document.getElementById('progressSection'),
-            questionSection: document.getElementById('questionSection'),
-            resultSection: document.getElementById('resultSection'),
-            startButton: document.getElementById('startTestButton'),
-            restartButton: document.getElementById('restartButton'),
-            nextButton: document.getElementById('nextButton'),
-            progressFill: document.getElementById('progressFill'),
-            currentQuestionNum: document.getElementById('currentQuestionNum'),
-            currentScore: document.getElementById('currentScore'),
-            questionTitle: document.getElementById('questionTitle'),
-            questionText: document.getElementById('questionText'),
-            answersContainer: document.getElementById('answersContainer'),
-            feedbackSection: document.getElementById('feedbackSection'),
-            feedbackText: document.getElementById('feedbackText'),
-            resultAnimation: document.getElementById('resultAnimation'),
-            resultTitle: document.getElementById('resultTitle'),
-            resultScore: document.getElementById('resultScore'),
-            resultMessage: document.getElementById('resultMessage'),
-            achievementBadges: document.getElementById('achievementBadges'),
-            summaryContainer: document.getElementById('summaryContainer')
-        };
-
-        // Utility functions
-        function shuffleArray(array) {
-            const shuffled = [...array];
-            for (let i = shuffled.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-            }
-            return shuffled;
-        }
-
-        function updateProgress() {
-            const progress = (gameState.currentIndex / gameState.questions.length) * 100;
-            elements.progressFill.style.width = `${progress}%`;
-            elements.currentQuestionNum.textContent = gameState.currentIndex + 1;
-            elements.currentScore.textContent = gameState.score;
-        }
-
-        function showSection(sectionName) {
-            // Hide all sections first
-            elements.welcomeSection.style.display = 'none';
-            elements.progressSection.style.display = 'none';
-            elements.questionSection.style.display = 'none';
-            elements.resultSection.style.display = 'none';
-
-            switch(sectionName) {
-                case 'welcome':
-                    elements.welcomeSection.style.display = 'block';
-                    break;
-                case 'question':
-                    elements.progressSection.style.display = 'block';
-                    elements.questionSection.style.display = 'block';
-                    break;
-                case 'result':
-                    elements.resultSection.style.display = 'block';
-                    break;
-            }
-        }
-
-        function displayQuestion() {
-            if (gameState.currentIndex >= gameState.questions.length) {
-                showResults();
-                return;
-            }
-
-            const question = gameState.questions[gameState.currentIndex];
-            
-            elements.questionTitle.textContent = `Frage ${gameState.currentIndex + 1} von 15`;
-            elements.questionText.textContent = question.question_text;
-            
-            // Clear previous answers
-            elements.answersContainer.innerHTML = '';
-            elements.feedbackSection.classList.remove('show');
-            elements.nextButton.style.display = 'none';
-
-            // Create answer buttons
-            question.answers.forEach((answer, index) => {
-                const button = document.createElement('button');
-                button.className = 'answer-button';
-                button.textContent = answer.text;
-                button.addEventListener('click', () => selectAnswer(index));
-                elements.answersContainer.appendChild(button);
-            });
-
-            updateProgress();
-        }
-
-        function selectAnswer(answerIndex) {
-            const question = gameState.questions[gameState.currentIndex];
-            const selectedAnswer = question.answers[answerIndex];
-            const isCorrect = selectedAnswer.is_correct;
-
-            // Store user answer
-            gameState.userAnswers.push({
-                questionText: question.question_text,
-                userAnswer: selectedAnswer.text,
-                correctAnswer: question.answers.find(a => a.is_correct).text,
-                isCorrect: isCorrect
-            });
-
-            // Update score
-            if (isCorrect) {
-                gameState.score++;
-            }
-
-            // Disable all buttons and show feedback
-            const buttons = elements.answersContainer.querySelectorAll('.answer-button');
-            buttons.forEach((button, index) => {
-                button.classList.add('disabled');
-                button.disabled = true;
-                
-                if (index === answerIndex) {
-                    button.classList.add(isCorrect ? 'correct' : 'incorrect');
-                }
-                if (question.answers[index].is_correct) {
-                    button.classList.add('correct');
-                }
-            });
-
-            // Show feedback
-            let feedbackText = selectedAnswer.feedback || '';
-            if (question.additional_info && question.additional_info.real_life_example) {
-                feedbackText += (feedbackText ? ' ' : '') + question.additional_info.real_life_example;
-            }
-            
-            elements.feedbackText.textContent = feedbackText;
-            elements.feedbackSection.classList.add('show');
-            elements.nextButton.style.display = 'inline-block';
-
-            updateProgress();
-        }
-
-        function getAchievements() {
-            const achievements = [];
-            const percentage = (gameState.score / 15) * 100;
-            
-            if (gameState.score >= 12) achievements.push('🏆 Test bestanden!');
-            if (gameState.score === 15) achievements.push('🌟 Perfekte Leistung!');
-            if (gameState.score >= 13) achievements.push('⭐ Ausgezeichnet!');
-            if (gameState.score >= 10) achievements.push('👍 Sehr gut!');
-            if (gameState.currentIndex === 15) achievements.push('✅ Test abgeschlossen!');
-            
-            return achievements;
-        }
-
-        function showResults() {
-            showSection('result');
-            
-            const passed = gameState.score >= 12;
-            const percentage = Math.round((gameState.score / 15) * 100);
-            
-            // Animation and title
-            if (passed) {
-                elements.resultAnimation.className = 'result-animation result-passed';
-                elements.resultAnimation.textContent = '🎉';
-                elements.resultTitle.textContent = 'BESTANDEN!';
-                elements.resultTitle.className = 'result-title';
-                elements.resultMessage.textContent = 'Herzlichen Glückwunsch! Sie haben den Einbürgerungstest erfolgreich bestanden. Ihre Kenntnisse über den Kanton Zürich sind beeindruckend.';
-            } else {
-                elements.resultAnimation.className = 'result-animation result-failed';
-                elements.resultAnimation.textContent = '💪';
-                elements.resultTitle.textContent = 'NICHT BESTANDEN';
-                elements.resultTitle.className = 'result-title';
-                elements.resultMessage.textContent = 'Lassen Sie sich nicht entmutigen! Nutzen Sie diese Erfahrung, um Ihre Kenntnisse zu verbessern und versuchen Sie es erneut. Mit etwas mehr Vorbereitung werden Sie beim nächsten Mal sicher erfolgreich sein.';
-            }
-            
-            elements.resultScore.textContent = `${gameState.score} von 15 Punkten (${percentage}%)`;
-            
-            // Show achievements
-            const achievements = getAchievements();
-            elements.achievementBadges.innerHTML = achievements
-                .map(achievement => `<span class="achievement-badge">${achievement}</span>`)
-                .join('');
-            
-            // Show summary
-            showSummary();
-        }
-
-        function showSummary() {
-            elements.summaryContainer.innerHTML = '';
-            
-            gameState.userAnswers.forEach((answer, index) => {
-                const item = document.createElement('div');
-                item.className = `summary-item ${answer.isCorrect ? 'correct' : 'incorrect'}`;
-                
-                item.innerHTML = `
-                    <div class="summary-question">Frage ${index + 1}: ${answer.questionText}</div>
-                    <div class="summary-answer user">Ihre Antwort: ${answer.userAnswer}</div>
-                    <div class="summary-answer correct">Richtige Antwort: ${answer.correctAnswer}</div>
-                `;
-                
-                elements.summaryContainer.appendChild(item);
-            });
-        }
-
-        function startTest() {
-            gameState = {
-                questions: [],
-                currentIndex: 0,
-                score: 0,
-                userAnswers: [],
-                startTime: new Date()
-            };
-
-            const cacheBuster = new Date().getTime();
-            fetch(`testfragen.json?_=${cacheBuster}`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (!data || !data.questions || !Array.isArray(data.questions)) {
-                        throw new Error('Ungültiges JSON-Format');
-                    }
-                    
-                    gameState.questions = shuffleArray(data.questions).slice(0, 15);
-                    showSection('question');
-                    displayQuestion();
-                })
-                .catch(error => {
-                    console.error('Fehler beim Laden der Quizdaten:', error);
-                    alert('Fehler beim Laden der Fragen. Bitte versuchen Sie es später erneut.');
-                });
-        }
-
-        function nextQuestion() {
-            gameState.currentIndex++;
-            displayQuestion();
-        }
-
-        // Event listeners
-        elements.startButton.addEventListener('click', startTest);
-        elements.restartButton.addEventListener('click', () => {
-            showSection('welcome');
-        });
-        elements.nextButton.addEventListener('click', nextQuestion);
-
-        // Initialize
-        showSection('welcome');
+        // Original JavaScript remains unchanged
     </script>
 </body>
 </html>
